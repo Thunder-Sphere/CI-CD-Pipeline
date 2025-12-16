@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Install build tools
       run: sudo apt-get update && sudo apt-get install -y build-essential
@@ -20,7 +20,7 @@ jobs:
       run: gcc multiply.c -o program
 
     - name: Upload build artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: c-build-artifact
         path: program
@@ -31,7 +31,7 @@ jobs:
 
     steps:
     - name: Download build artifact
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: c-build-artifact
 
