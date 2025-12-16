@@ -17,7 +17,7 @@ jobs:
       run: sudo apt-get update && sudo apt-get install -y build-essential
 
     - name: Compile C program
-      run: gcc Multiply.c -o program
+      run: gcc multiply.c -o program
 
     - name: Upload build artifact
       uses: actions/upload-artifact@v3
